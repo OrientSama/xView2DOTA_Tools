@@ -16,13 +16,13 @@ def main():
     random.seed(0)
     # 将数据集中10%的数据划分到验证集中
     split_rate = 0.15
-    data_root = Path(r"E:\Dataset\Split\xview_train")
+    data_root = Path(r"E:\Dataset\Split\dota_train")
     origin_path = data_root / "common_ann"
     assert os.path.exists(origin_path), "path '{}' does not exist.".format(origin_path)
 
     ann_list = os.listdir(origin_path)
     # 建立保存val集的文件夹
-    val_root = data_root.parent / "xview_val"
+    val_root = data_root.parent / "dota_val"
     val_ann = val_root / "common_ann"
     val_img = val_root / "images"
 
