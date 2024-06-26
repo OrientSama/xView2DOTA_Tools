@@ -15,7 +15,7 @@ def main():
     # 保证随机可复现
     random.seed(0)
     # 将数据集中10%的数据划分到验证集中
-    split_rate = 0.15
+    split_rate = 0.8
     data_root = Path(r"E:\Dataset\Split\dota_train")
     origin_path = data_root / "common_ann"
     assert os.path.exists(origin_path), "path '{}' does not exist.".format(origin_path)
@@ -38,7 +38,7 @@ def main():
             # 将分配至验证集中的文件复制到相应目录
             move(origin_path / ann, val_ann / ann)
             move(data_root / "images" / ann.replace(".txt", ".png"), val_img / ann.replace(".txt", ".png"))
-        print("\r processing [{}/{}]".format( index+1, num), end="")  # processing bar
+        print("\r processing [{}/{}]".format(index+1, num), end="")  # processing bar
 
     print("processing done!")
 

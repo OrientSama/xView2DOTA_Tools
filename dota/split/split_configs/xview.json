@@ -1,0 +1,28 @@
+{
+  "nproc": 10,
+  "img_dirs": [
+    "E:/Dataset/xView/images/train/"
+  ],
+  "ann_dirs": [
+    "E:/Dataset/xView/train/"
+  ],
+  "sizes": [
+    800
+  ],
+  "gaps": [
+    100
+  ],
+  "rates": [
+    1.0
+  ],
+  "img_rate_thr": 0.6,
+  "iof_thr": 0.7,
+  "no_padding": false,
+  "padding_value": [
+    104,
+    116,
+    124
+  ],
+  "save_dir": "E:/Dataset/Split/xview_train/",
+  "save_ext": ".png"
+}

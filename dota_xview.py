@@ -78,7 +78,7 @@ fixed_category = {'plane': 'plane', 'ship': 'ship', 'storage-tank': 'storage-tan
                   "barge": "ship", 'ferry': "ship", 'yacht': "ship", 'oil-tanker': "ship"}
 
 
-def common_cat(path: Path):
+def common_category(path: Path):
     file_list = os.listdir(path)
     path_parent = path.parent
     common_ann = path_parent / "common_ann"
@@ -93,6 +93,8 @@ def common_cat(path: Path):
             else:
                 flag = False  # 用于标记是否存在三类物体
                 for line in data:
+                    if line.startswith(('image', 'gsd')):
+                        continue
                     category = line.split(' ')[-2]
                     if category in fixed_category:
                         flag = True
@@ -105,7 +107,8 @@ def common_cat(path: Path):
 
 
 split = Path("E:/Dataset/Split")
-dota = split / 'dota_train'
-xview = split / 'xview_train'
-for p in [dota, xview]:
-    common_cat(p / 'annfiles')
+dota_train = split / 'dota_train'
+# dota_val = split / 'dota_val'
+# xview = split / 'xview_train'
+for p in [dota_train, ]:
+    common_category(p / 'annfiles')
