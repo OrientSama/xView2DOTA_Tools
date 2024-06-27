@@ -1,4 +1,5 @@
 ### 该文件夹内的python文件主要用于xView2DOTA的数据集处理
+### The Python files in this folder are mainly used for dataset processing in xView2DOTA
 ```
 TOOLS
 │  Active.py            # 用来去除文件名 '.disabled' 后缀
