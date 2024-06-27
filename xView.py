@@ -50,7 +50,7 @@ def convert_labels(fname=Path('xView/xView_train.geojson')):
                          29, 30, 31, 32, 33, 34, 35, 36, 37, -1, 38, 39, 40, 41, 42, 43, 44, 45, -1, -1, -1, -1, 46,
                          47, 48, 49, -1, 50, 51, -1, 52, -1, -1, -1, 53, 54, -1, 55, -1, -1, 56, -1, 57, -1, 58, 59]
     # 从文件中加载 YAML 数据
-    with open(r"E:\PyCharm_Projects\Domain_Adaption\yolov5\data\xView.yaml", 'r', encoding='utf-8') as file:
+    with open(r".\xView.yaml", 'r', encoding='utf-8') as file:
         xview_data = yaml.load(file, Loader=yaml.SafeLoader)
         xview_index2name = xview_data['names']
 
