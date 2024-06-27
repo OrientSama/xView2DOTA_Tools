@@ -72,8 +72,9 @@ xveiw classes
 """
 
 # 修改了类别的map
-fixed_category = {'plane': 'plane', 'ship': 'ship', 'storage-tank': 'storage-tank', 'fixed-wing-aircraft': 'plane',
-                  'small-aircraft': 'plane', 'cargo-plane': 'plane', 'container-ship': 'ship', "motorboat": "ship",
+fixed_category = {'fixed-wing-aircraft': 'plane', 'plane': 'plane', 'small-aircraft': 'plane', 'cargo-plane': 'plane',
+                  'storage-tank': 'storage-tank',
+                  'ship': 'ship', 'container-ship': 'ship', "motorboat": "ship",
                   "sailboat": "ship", "tugboat": "ship", "fishing-vessel": "ship", "maritime-vessel": "ship",
                   "barge": "ship", 'ferry': "ship", 'yacht': "ship", 'oil-tanker': "ship"}
 

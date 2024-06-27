@@ -31,7 +31,7 @@ def DOTA2COCO(srcpath, destfile):
     data_dict['categories'] = []
     data_dict['annotations'] = []
     for idex, name in enumerate(wordname_15):
-        single_cat = {'id': idex + 1, 'name': name, 'supercategory': name}
+        single_cat = {'id': idex, 'name': name, 'supercategory': name}
         data_dict['categories'].append(single_cat)
 
     inst_count = 1
@@ -58,7 +58,7 @@ def DOTA2COCO(srcpath, destfile):
             for obj in objects:
                 single_obj = {}
                 single_obj['area'] = obj['area']
-                single_obj['category_id'] = wordname_15.index(obj['name']) + 1
+                single_obj['category_id'] = wordname_15.index(obj['name'])
                 single_obj['segmentation'] = []
                 single_obj['segmentation'].append(obj['poly'])
                 single_obj['iscrowd'] = 0
