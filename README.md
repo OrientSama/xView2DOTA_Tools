@@ -8,6 +8,7 @@ TOOLS
 │  dota_xview.py        # 将xView与DOTA公共类提取出来
 │  splitdataset.py      # 将有标签的训练集重新划分
 │  xView.py             # 将xView的标签转为DOTA格式
+|  xView.yaml           # 名称、编号对应文件
 │
 ├─dota
 │  │  README.md
